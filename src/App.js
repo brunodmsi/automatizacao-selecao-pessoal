@@ -1,20 +1,18 @@
 import React from 'react';
-import { Switch, Router, Route } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
 import GlobalStyle from './styles/global';
+
 import history from './services/history';
+import Routes from './routes'
 
 import './config/ReactotronConfig';
-
-import Main from './pages/Main';
 
 function App() {
   return (
     <Router history={history}>
       <GlobalStyle />
-      <Switch>
-        <Route path="/" exact component={Main} />
-      </Switch>
+      <Routes />
     </Router>
   );
 }

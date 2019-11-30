@@ -1,0 +1,72 @@
+[
+  {
+    "priority": 1,
+    "value": "Não pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 2,
+    "value": "Não pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Sim"},
+      {"tag": "superior", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 3,
+    "value": "Não pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Sim"},
+      {"tag": "superior", "value": "Sim"},
+      {"tag": "lingua", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 4,
+    "value": "Não pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Sim"},
+      {"tag": "superior", "value": "Sim"},
+      {"tag": "lingua", "value": "Sim"},
+      {"tag": "experiencia", "value": "Sim"},
+      {"tag": "pos", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 5,
+    "value": "Não pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Sim"},
+      {"tag": "superior", "value": "Sim"},
+      {"tag": "lingua", "value": "Sim"},
+      {"tag": "experiencia", "value": "Não"},
+      {"tag": "pos", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 6,
+    "value": "Não pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Sim"},
+      {"tag": "superior", "value": "Sim"},
+      {"tag": "lingua", "value": "Sim"},
+      {"tag": "experiencia", "value": "Sim"},
+      {"tag": "pos", "value": "Sim"},
+      {"tag": "admissional", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 7,
+    "value": "Pode ser contratado",
+    "entrys": [
+      {"tag": "medio", "value": "Sim"},
+      {"tag": "superior", "value": "Sim"},
+      {"tag": "lingua", "value": "Sim"},
+      {"tag": "experiencia", "value": "Sim"},
+      {"tag": "pos", "value": "Sim"},
+      {"tag": "admissional", "value": "Sim"}
+    ]
+  }
+]

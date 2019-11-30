@@ -2,11 +2,13 @@ import React from 'react';
 
 import { Container, Content } from './styles';
 
-export default function Main() {
+export default function Header() {
   return (
     <Container>
       <Content>
-        <p>hello</p>
+        <nav>
+          <h1>Seleção de Pessoal</h1>
+        </nav>
       </Content>
     </Container>
   );

@@ -3,56 +3,48 @@
     "id": 1,
     "tag": "medio",
     "display_name": "Ensino Médio",
-    "type": "univalorado",
     "values": ["Sim", "Não"],
-    "var_type": "input"
+    "question": "Possui Ensino Médio?"
   },
   {
     "id": 2,
     "tag": "superior",
     "display_name": "Ensino Superior",
-    "type": "univalorado",
     "values": ["Sim", "Não"],
-    "var_type": "input"
+    "question": "Possui Ensino Superior?"
   },
   {
     "id": 3,
     "tag": "experiencia",
     "display_name": "Experiência Profissional",
-    "type": "univalorado",
     "values": ["Sim", "Não"],
-    "var_type": "input"
+    "question": "Possui Experiência profissional?"
   },
   {
     "id": 4,
     "tag": "lingua",
     "display_name": "Língua Estrangeira",
-    "type": "univalorado",
     "values": ["Sim", "Não"],
-    "var_type": "input"
+    "question": "Possui proficiência em algum idioma estrangeiro?"
   },
   {
     "id": 5,
     "tag": "pos",
     "display_name": "Pós Graduação",
-    "type": "univalorado",
     "values": ["Sim", "Não"],
-    "var_type": "input"
+    "question": "Possui Pós Graduação?"
   },
   {
     "id": 6,
     "tag": "admissional",
     "display_name": "Teste Admissional",
-    "type": "univalorado",
     "values": ["Sim", "Não"],
-    "var_type": "input"
+    "question": "Passou no Teste Admissional?"
   },
   {
     "id": 7,
     "tag": "resultado",
     "display_name": "Resultado",
-    "type": "univalorado",
-    "values": ["Pode ser contratado", "Não pode ser contratado"],
-    "var_type": "output"
+    "values": ["Pode ser contratado", "Não pode ser contratado"]
   }
 ]
