@@ -22,6 +22,27 @@ export const Container = styled.div`
       font-size: 24px;
       font-weight: bold;
     }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 5px 15px 5px 15px;
+      background-color: ${colors.primary};
+      border: 0;
+      border-radius: 4px;
+      transition: 0.2s background;
+
+      :hover {
+        background-color: ${darken(0.03, colors.primary)};
+      }
+
+      span {
+        color: ${colors.text};
+        margin-left: 5px;
+      }
+    }
   }
 `;
 
@@ -55,6 +76,14 @@ export const Variable = styled.div`
       font-size: 16px;
       color: #eee;
       opacity: 0.6;
+    }
+
+    p {
+      margin-left: 10px;
+
+      :hover {
+        cursor: pointer;
+      }
     }
 
     button {

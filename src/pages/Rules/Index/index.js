@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MdAddCircleOutline } from 'react-icons/md';
 
 import { Container, Rule } from './styles';
 
@@ -9,18 +10,14 @@ export default function RulesIndex() {
   const rules = new Rules();
   const variables = new Variables();
 
-  useEffect(() => {
-
-  })
-
   return (
     <Container>
       <header>
         <strong>Regras do Sistema</strong>
-        {/* <button type="button" onClick={() => clearDetails()}>
-          <MdAddCircleOutline size={20} color="#fff" />
-          <span>Novo meetup</span>
-        </button> */}
+        <button type="button">
+          <MdAddCircleOutline size={20} color="#f2f2f2" />
+          <span>Nova regra</span>
+        </button>
       </header>
 
       <ul>

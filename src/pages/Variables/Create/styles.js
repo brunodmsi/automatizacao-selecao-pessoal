@@ -22,30 +22,91 @@ export const Container = styled.div`
       font-weight: bold;
     }
 
-    button {
+    span {
+      color: #eee;
+      opacity: 0.6;
+    }
+  }
+
+  div {
+    background: ${colors.surface};
+    color: ${colors.text};
+    width: 100%;
+    border-radius: 4px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    > form {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        /* margin-bottom: 20px; */
+      }
+
+      input {
+        margin-bottom: 10px;
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin-top: 10px;
+
+        padding: 10px 30px 10px 30px;
+        align-items: center;
+        justify-content: center;
+
+        background-color: ${colors.primary};
+        border-radius: 4px;
+        border: 0;
+
+        color: #000;
+        font-weight: 600;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      padding: 5px 15px 5px 15px;
-      background-color: ${colors.primary};
-      border: 0;
-      border-radius: 4px;
-      transition: 0.2s background;
+      h3 {
+        margin-top: 20px;
+      }
 
-      :hover {
-        background-color: ${darken(0.03, colors.primary)};
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        div {
+
+        }
       }
 
       span {
-        color: ${colors.text};
-        margin-left: 5px;
+        margin-top: 10px;
+
+        padding: 10px 50px 10px 50px;
+        border-radius: 4px;
+
+        background-color: ${colors.secondary};
       }
     }
   }
 `;
 
-export const Rule = styled.div`
+export const History = styled.div`
   background: ${colors.surface};
   color: ${colors.text};
   width: 100%;
@@ -63,10 +124,6 @@ export const Rule = styled.div`
   > span {
     font-weight: bold;
     font-size: 18px;
-
-    p {
-      font-size: 16px;
-    }
   }
 
   div {
