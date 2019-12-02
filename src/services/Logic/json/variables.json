@@ -1,50 +1,93 @@
 [
   {
     "id": 1,
-    "tag": "medio",
-    "display_name": "Ensino Médio",
+    "tag": "cabo",
+    "display_name": "Cabo de Internet",
     "values": ["Sim", "Não"],
-    "question": "Possui Ensino Médio?"
+    "question": "O cabo azul está conectado?"
   },
   {
     "id": 2,
-    "tag": "superior",
-    "display_name": "Ensino Superior",
+    "tag": "conectividade",
+    "display_name": "Conectividade",
     "values": ["Sim", "Não"],
-    "question": "Possui Ensino Superior?"
+    "question": "Tem um triângulo amarelo no ícone da internet próximo a hora?"
   },
   {
     "id": 3,
-    "tag": "experiencia",
-    "display_name": "Experiência Profissional",
+    "tag": "erro",
+    "display_name": "Erro",
     "values": ["Sim", "Não"],
-    "question": "Possui Experiência profissional?"
+    "question": "Aparece a mensagem: não foi possível se conectar?"
   },
   {
     "id": 4,
-    "tag": "lingua",
-    "display_name": "Língua Estrangeira",
+    "tag": "cache",
+    "display_name": "Acesso negado",
     "values": ["Sim", "Não"],
-    "question": "Possui proficiência em algum idioma estrangeiro?"
+    "question": "Aparece a mensagem: acesso negado ao cache ou url invalida?"
   },
   {
     "id": 5,
-    "tag": "pos",
-    "display_name": "Pós Graduação",
+    "tag": "proxy",
+    "display_name": "Proxy",
     "values": ["Sim", "Não"],
-    "question": "Possui Pós Graduação?"
+    "question": "Você sabe o que é proxy?"
   },
   {
     "id": 6,
-    "tag": "admissional",
-    "display_name": "Teste Admissional",
+    "tag": "site",
+    "display_name": "Site",
     "values": ["Sim", "Não"],
-    "question": "Passou no Teste Admissional?"
+    "question": "É só um site específico que você não consegue acessar?"
   },
   {
     "id": 7,
-    "tag": "resultado",
-    "display_name": "Resultado",
-    "values": ["Pode ser contratado", "Não pode ser contratado"]
+    "tag": "problemaip",
+    "display_name": "Problema no IP",
+    "values": ["Sim", "Não"],
+    "question": "Execute a solução de problemas do Windows (botão direito no ícone que mostra a internet conectada->solução de problemas). Deu problema no IP?"
+  },
+  {
+    "id": 8,
+    "tag": "ip",
+    "display_name": "IP",
+    "values": ["Sim", "Não"],
+    "question": "Você sabe o que é IP?"
+  },
+  {
+    "id": 9,
+    "tag": "dns",
+    "display_name": "DNS",
+    "values": ["Sim", "Não"],
+    "question": "Apareceu problema no DNS?"
+  },
+  {
+    "id": 10,
+    "tag": "dns",
+    "display_name": "DNS",
+    "values": ["Sim", "Não"],
+    "question": "Apareceu problema no DNS?"
+  },
+  {
+    "id": 11,
+    "tag": "lenta",
+    "display_name": "Internet Lenta",
+    "values": ["Sim", "Não"],
+    "question": "A Internet está lenta?"
+  },
+  {
+    "id": 12,
+    "tag": "download",
+    "display_name": "Download",
+    "values": ["Sim", "Não"],
+    "question": "Você está fazendo download?"
+  },
+  {
+    "id": 13,
+    "tag": "outro",
+    "display_name": "Problema questionado",
+    "values": ["Sim", "Não"],
+    "question": "O seu problema foi questionado?"
   }
 ]

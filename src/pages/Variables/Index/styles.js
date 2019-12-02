@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     strong {
       color: ${colors.text};
-      font-size: 32px;
+      font-size: 24px;
       font-weight: bold;
     }
   }

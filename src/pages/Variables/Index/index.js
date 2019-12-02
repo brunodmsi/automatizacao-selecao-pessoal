@@ -7,10 +7,6 @@ import Variables from '../../../services/Logic/Variables';
 export default function VariablesIndex() {
   const variables = new Variables();
 
-  useEffect(() => {
-    console.log(variables.getVars())
-  })
-
   return (
     <Container>
       <header>

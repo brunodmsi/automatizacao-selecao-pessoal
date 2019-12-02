@@ -1,72 +1,92 @@
 [
   {
     "priority": 1,
-    "value": "Não pode ser contratado",
+    "value": "Conecte o cabo",
     "entrys": [
-      {"tag": "medio", "value": "Não"}
+      {"tag": "cabo", "value": "Não"}
     ]
   },
   {
     "priority": 2,
-    "value": "Não pode ser contratado",
+    "value": "Ligue para o responsável da sua  internet",
     "entrys": [
-      {"tag": "medio", "value": "Sim"},
-      {"tag": "superior", "value": "Não"}
+      {"tag": "conectividade", "value": "Sim"}
     ]
   },
   {
     "priority": 3,
-    "value": "Não pode ser contratado",
+    "value": "Ligue para o responsável da sua internet",
     "entrys": [
-      {"tag": "medio", "value": "Sim"},
-      {"tag": "superior", "value": "Sim"},
-      {"tag": "lingua", "value": "Não"}
+      {"tag": "erro", "value": "Sim"}
     ]
   },
   {
     "priority": 4,
-    "value": "Não pode ser contratado",
+    "value": "Altere o proxy",
     "entrys": [
-      {"tag": "medio", "value": "Sim"},
-      {"tag": "superior", "value": "Sim"},
-      {"tag": "lingua", "value": "Sim"},
-      {"tag": "experiencia", "value": "Sim"},
-      {"tag": "pos", "value": "Não"}
+      {"tag": "cache", "value": "Sim"},
+      {"tag": "proxy", "value": "Sim"}
     ]
   },
   {
     "priority": 5,
-    "value": "Não pode ser contratado",
+    "value": "Chame um técnico",
     "entrys": [
-      {"tag": "medio", "value": "Sim"},
-      {"tag": "superior", "value": "Sim"},
-      {"tag": "lingua", "value": "Sim"},
-      {"tag": "experiencia", "value": "Não"},
-      {"tag": "pos", "value": "Não"}
+      {"tag": "cache", "value": "Sim"},
+      {"tag": "proxy", "value": "Não"}
     ]
   },
   {
     "priority": 6,
-    "value": "Não pode ser contratado",
+    "value": "Verifique se o IP não está fixo",
     "entrys": [
-      {"tag": "medio", "value": "Sim"},
-      {"tag": "superior", "value": "Sim"},
-      {"tag": "lingua", "value": "Sim"},
-      {"tag": "experiencia", "value": "Sim"},
-      {"tag": "pos", "value": "Sim"},
-      {"tag": "admissional", "value": "Não"}
+      {"tag": "problemaip", "value": "Sim"},
+      {"tag": "ip", "value": "Sim"}
     ]
   },
   {
     "priority": 7,
-    "value": "Pode ser contratado",
+    "value": "Chame um técnico",
     "entrys": [
-      {"tag": "medio", "value": "Sim"},
-      {"tag": "superior", "value": "Sim"},
-      {"tag": "lingua", "value": "Sim"},
-      {"tag": "experiencia", "value": "Sim"},
-      {"tag": "pos", "value": "Sim"},
-      {"tag": "admissional", "value": "Sim"}
+      {"tag": "problemaip", "value": "Sim"},
+      {"tag": "ip", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 8,
+    "value": "Ligue para o responsável da sua internet",
+    "entrys": [
+      {"tag": "dns", "value": "Sim"}
+    ]
+  },
+  {
+    "priority": 9,
+    "value": "Ligue para o responsável da sua internet",
+    "entrys": [
+      {"tag": "dns", "value": "Sim"}
+    ]
+  },
+  {
+    "priority": 10,
+    "value": "Ligue para o responsável da sua internet",
+    "entrys": [
+      {"tag": "lenta", "value": "Sim"},
+      {"tag": "download", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 11,
+    "value": "Está lenta por causa do download",
+    "entrys": [
+      {"tag": "lenta", "value": "Sim"},
+      {"tag": "download", "value": "Sim"}
+    ]
+  },
+  {
+    "priority": 12,
+    "value": "Chame um técnico",
+    "entrys": [
+      {"tag": "outro", "value": "Não"}
     ]
   }
 ]

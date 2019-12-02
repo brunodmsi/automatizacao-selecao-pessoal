@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import colors from '../../styles/colors';
 
 export const Container = styled.div`
-  background: #121212;
+  background: ${colors.surface};
   padding: 0 30px;
 `;
 
@@ -15,12 +16,26 @@ export const Content = styled.div`
 
   nav {
     h1 {
-      color: #f2f2f2;
+      a {
+        font-size: 28px;
+        color: ${colors.text};
+      }
     }
   }
 
   aside {
     display: flex;
     align-items: center;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: ${colors.text};
+
+      }
+    }
   }
 `;
