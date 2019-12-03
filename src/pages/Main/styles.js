@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import colors from '../../styles/colors';
-import { darken } from 'polished';
+import styled from "styled-components";
+import colors from "../../styles/colors";
+import { darken } from "polished";
 
 export const Container = styled.div`
   max-width: 940px;
@@ -20,6 +20,34 @@ export const Container = styled.div`
       color: ${colors.text};
       font-size: 24px;
       font-weight: bold;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: ${colors.text};
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      padding: 5px 15px 5px 15px;
+      background-color: ${colors.primary};
+      border: 0;
+      border-radius: 4px;
+      transition: 0.2s background;
+
+      :hover {
+        background-color: ${darken(0.03, colors.primary)};
+      }
+
+      span {
+        color: ${colors.text};
+        margin-left: 5px;
+      }
     }
 
     span {
@@ -72,7 +100,9 @@ export const Question = styled.div`
 `;
 
 export const HistoryContainer = styled.div`
-  h2, span, h3 {
+  h2,
+  span,
+  h3 {
     display: flex;
     justify-content: center;
     align-items: center;

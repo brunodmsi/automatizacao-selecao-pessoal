@@ -58,6 +58,7 @@ export default function RuleCreate() {
     entrys.splice(0, 1);
 
     if (
+      priority <= 0 ||
       priority === null ||
       entrys.length === 0 ||
       data.result === ""

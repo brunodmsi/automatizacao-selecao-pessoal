@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { MdAddCircleOutline, MdDelete } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { MdAddCircleOutline, MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-import { Container, Rule } from './styles';
+import { Container, Rule } from "./styles";
 
-import colors from '../../../styles/colors';
+import colors from "../../../styles/colors";
 
-import Rules from '../../../services/Logic/Rules';
-import Variables from '../../../services/Logic/Variables';
+import Rules from "../../../services/Logic/Rules";
+import Variables from "../../../services/Logic/Variables";
 
 const rules = new Rules();
 const variables = new Variables();
@@ -19,7 +19,7 @@ export default function RulesIndex() {
 
     setArray(arr);
 
-    return () => setArray(arr)
+    return () => setArray(arr);
   }, []);
 
   function handleDelete(priority) {
@@ -42,35 +42,38 @@ export default function RulesIndex() {
       </header>
 
       <ul>
-        {array.length === 0
-            ? (
-              <Rule>
-                <span>Nenhuma regra registrada :(</span>
-                <div>
-                  <span>Crie a primeira clicando acima!</span>
-                </div>
-              </Rule>
-            ) : (<></>)}
+        {array.length === 0 ? (
+          <Rule>
+            <span>Nenhuma regra registrada :(</span>
+            <div>
+              <span>Crie a primeira clicando acima!</span>
+            </div>
+          </Rule>
+        ) : (
+          <></>
+        )}
         {array.map(rule => (
           <Rule key={rule.priority}>
             <span>
               Regra {rule.priority}
-              <p>{rule.entrys.map((entry, index) => {
-                if (index === 0)
-                  return (
-                    <p>
-                      SE {variables.getVarByTag(entry.tag).display_name}
-                      &nbsp;= {entry.value}
-                    </p>
-                  )
-                else
-                  return (
-                    <p>
-                      E {variables.getVarByTag(entry.tag).display_name}
-                      &nbsp;= {entry.value}
-                    </p>
-                  )
-              })}</p>
+              <p>
+                {rule.entrys.map((entry, index) => {
+                  if (index === 0)
+                    return (
+                      <p>
+                        SE {variables.getVarByTag(entry.tag).display_name}
+                        &nbsp;= {entry.value}
+                      </p>
+                    );
+                  else
+                    return (
+                      <p>
+                        E {variables.getVarByTag(entry.tag).display_name}
+                        &nbsp;= {entry.value}
+                      </p>
+                    );
+                })}
+              </p>
             </span>
             <div>
               <span>{rule.value}</span>

@@ -2,98 +2,84 @@
   {
     "priority": 1,
     "value": "Conecte o cabo",
-    "entrys": [
-      {"tag": "cabo", "value": "Não"}
-    ]
+    "entrys": [{ "tag": "cabo", "value": "Não" }]
   },
   {
     "priority": 2,
     "value": "Ligue para o responsável da sua internet",
-    "entrys": [
-      {"tag": "conectividade", "value": "Sim"}
-    ]
+    "entrys": [{ "tag": "conectividade", "value": "Sim" }]
   },
   {
     "priority": 3,
     "value": "Ligue para o responsável da sua internet",
-    "entrys": [
-      {"tag": "erro", "value": "Sim"}
-    ]
+    "entrys": [{ "tag": "erro", "value": "Sim" }]
   },
   {
     "priority": 4,
     "value": "Altere o proxy",
     "entrys": [
-      {"tag": "cache", "value": "Sim"},
-      {"tag": "proxy", "value": "Sim"}
+      { "tag": "cache", "value": "Sim" },
+      { "tag": "proxy", "value": "Sim" }
     ]
   },
   {
     "priority": 5,
     "value": "Chame um técnico",
     "entrys": [
-      {"tag": "cache", "value": "Sim"},
-      {"tag": "proxy", "value": "Não"}
+      { "tag": "cache", "value": "Sim" },
+      { "tag": "proxy", "value": "Não" }
     ]
   },
   {
     "priority": 6,
     "value": "Tente abrir com outro navegador",
-    "entrys": [
-      {"tag": "site", "value": "Sim"}
-    ]
+    "entrys": [{ "tag": "site", "value": "Sim" }]
   },
   {
     "priority": 7,
     "value": "Verifique se o IP não está fixo",
     "entrys": [
-      {"tag": "problemaip", "value": "Sim"},
-      {"tag": "ip", "value": "Sim"}
+      { "tag": "problemaip", "value": "Sim" },
+      { "tag": "ip", "value": "Sim" }
     ]
   },
   {
     "priority": 8,
     "value": "Chame um técnico",
     "entrys": [
-      {"tag": "problemaip", "value": "Sim"},
-      {"tag": "ip", "value": "Não"}
+      { "tag": "problemaip", "value": "Sim" },
+      { "tag": "ip", "value": "Não" }
     ]
   },
   {
     "priority": 9,
     "value": "Ligue para o responsável da sua internet",
-    "entrys": [
-      {"tag": "dns", "value": "Sim"}
-    ]
+    "entrys": [{ "tag": "dns", "value": "Sim" }]
   },
   {
     "priority": 10,
     "value": "Ligue para o responsável da sua internet",
     "entrys": [
-      {"tag": "lenta", "value": "Sim"},
-      {"tag": "download", "value": "Não"}
+      { "tag": "lenta", "value": "Sim" },
+      { "tag": "download", "value": "Não" }
     ]
   },
   {
     "priority": 11,
     "value": "Está lenta por causa do download",
     "entrys": [
-      {"tag": "lenta", "value": "Sim"},
-      {"tag": "download", "value": "Sim"}
+      { "tag": "lenta", "value": "Sim" },
+      { "tag": "download", "value": "Sim" }
     ]
   },
   {
     "priority": 12,
     "value": "Chame um técnico",
-    "entrys": [
-      {"tag": "outro", "value": "Não"}
-    ]
+    "entrys": [{ "tag": "outro", "value": "Não" }]
   },
   {
     "priority": 13,
     "value": "Sem diagnóstico",
-    "entrys": [
-      {"tag": "outro", "value": "Sim"}
-    ]
+    "entrys": [{ "tag": "outro", "value": "Sim" }]
   }
 ]
