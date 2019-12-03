@@ -1,11 +1,24 @@
+
 import json from './json/variables.json';
 
 class Variables {
   constructor() {
-    this.variables = json;
+    this.localStorageName = '@se-internet/variables'
+
+    if (!localStorage.getItem(this.localStorageName))
+      localStorage.setItem(this.localStorageName, JSON.stringify(json));
+
+    const get = localStorage.getItem(this.localStorageName);
+    this.variables = JSON.parse(get)
 
     this.answers = [];
     this.tags = [];
+  }
+
+  updateStorage() {
+    const get = localStorage.getItem(this.localStorageName);
+    this.variables = JSON.parse(get);
+    return this.variables;
   }
 
   addAnswer(answer) {
@@ -43,30 +56,32 @@ class Variables {
   addVar({ question, variable, display }) {
     const greatestId = this.getGreatestId();
 
-    console.tron.log(this.variables);
-
     this.variables = [...this.variables, {
-      id: greatestId + 1,
+      id: greatestId !== 0 ? greatestId + 1 : 1,
       tag: variable,
       question,
       display_name: display,
       values: ['Sim', 'Não']
     }]
 
-    console.tron.log(this.variables);
+    this.saveVariables();
+  }
 
-    // this.saveVariable();
+  saveVariables() {
+    localStorage.setItem(this.localStorageName, JSON.stringify(this.variables));
+    const get = localStorage.getItem(this.localStorageName);
+    this.variables = JSON.parse(get);
   }
 
   deleteVar(tag) {
-    for (let i = 0; i < this.variables.length; i += 1) {
-      if (this.variables[i].tag === tag) {
-        this.variables.splice(i, 1);
-        i -= 1;
-      }
-    }
+    this.variables = this.variables.filter(item => item.tag !== tag);
 
-    return this.variables;
+    const get = localStorage.getItem('@se-internet/rules');
+    const rules = JSON.parse(get);
+    const newRules = rules.filter(rule => !rule.entrys.find(entry => entry.tag === tag))
+    localStorage.setItem('@se-internet/rules', JSON.stringify(newRules));
+
+    this.saveVariables();
   }
 
   addTag(tag) {
@@ -79,6 +94,10 @@ class Variables {
 
   getVars() {
     return this.variables;
+  }
+
+  getVarsWithoutResult() {
+    return this.variables.filter(variable => variable.tag !== 'resultado');
   }
 
   getVarByTag(tag) {

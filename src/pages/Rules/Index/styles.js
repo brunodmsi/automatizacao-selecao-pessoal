@@ -27,6 +27,11 @@ export const Container = styled.div`
       justify-content: center;
       align-items: center;
 
+      a {
+        display: flex;
+        align-items: center;
+      }
+
       padding: 5px 15px 5px 15px;
       background-color: ${colors.primary};
       border: 0;
@@ -79,6 +84,11 @@ export const Rule = styled.div`
       font-size: 16px;
       color: #eee;
       opacity: 0.6;
+    }
+
+    p {
+      cursor: pointer;
+      margin-left: 10px;
     }
 
     button {

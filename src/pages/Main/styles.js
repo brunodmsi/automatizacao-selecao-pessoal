@@ -27,78 +27,71 @@ export const Container = styled.div`
       opacity: 0.6;
     }
   }
+`;
 
-  div {
-    background: ${colors.surface};
-    color: ${colors.text};
-    width: 100%;
-    border-radius: 4px;
-    padding: 20px 25px;
+export const Question = styled.div`
+  background: ${colors.surface};
+  color: ${colors.text};
+  width: 100%;
+  border-radius: 4px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  > form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+
+      padding: 10px 30px 10px 30px;
+      align-items: center;
+      justify-content: center;
+
+      background-color: ${colors.primary};
+      border-radius: 4px;
+      border: 0;
+
+      color: #000;
+      font-weight: 600;
+    }
+  }
+`;
+
+export const HistoryContainer = styled.div`
+  h2, span, h3 {
+    display: flex;
     justify-content: center;
     align-items: center;
+    color: ${colors.text};
+  }
 
-    > form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  h2 {
+    font-size: 26px;
+  }
 
-      h2 {
-        margin-bottom: 20px;
-      }
+  h3 {
+    font-size: 25px;
+    margin-top: 30px;
+  }
 
-      label {
-        margin-bottom: 10px;
-      }
-
-      button {
-        margin-top: 10px;
-
-        padding: 10px 30px 10px 30px;
-        align-items: center;
-        justify-content: center;
-
-        background-color: ${colors.primary};
-        border-radius: 4px;
-        border: 0;
-
-        color: #000;
-        font-weight: 600;
-      }
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      h3 {
-        margin-top: 20px;
-      }
-
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-
-        div {
-
-        }
-      }
-
-      span {
-        margin-top: 10px;
-
-        padding: 10px 50px 10px 50px;
-        border-radius: 4px;
-
-        background-color: ${colors.secondary};
-      }
-    }
+  > span {
+    padding: 10px 10px 10px 10px;
+    background-color: ${colors.secondary};
+    font-size: 18px;
   }
 `;
 
@@ -117,9 +110,18 @@ export const History = styled.div`
     margin-top: 10px;
   }
 
-  > span {
+  > p {
+    display: flex;
+    float: left;
+    flex-direction: column;
     font-weight: bold;
     font-size: 18px;
+
+    span {
+      font-weight: normal;
+      align-self: flex-start;
+      margin-left: 20px;
+    }
   }
 
   div {
@@ -132,6 +134,14 @@ export const History = styled.div`
       font-size: 16px;
       color: #eee;
       opacity: 0.6;
+    }
+
+    p {
+      margin-left: 10px;
+
+      :hover {
+        cursor: pointer;
+      }
     }
 
     button {

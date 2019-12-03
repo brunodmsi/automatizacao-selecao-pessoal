@@ -8,7 +8,7 @@
   },
   {
     "priority": 2,
-    "value": "Ligue para o responsável da sua  internet",
+    "value": "Ligue para o responsável da sua internet",
     "entrys": [
       {"tag": "conectividade", "value": "Sim"}
     ]
@@ -38,6 +38,13 @@
   },
   {
     "priority": 6,
+    "value": "Tente abrir com outro navegador",
+    "entrys": [
+      {"tag": "site", "value": "Sim"}
+    ]
+  },
+  {
+    "priority": 7,
     "value": "Verifique se o IP não está fixo",
     "entrys": [
       {"tag": "problemaip", "value": "Sim"},
@@ -45,18 +52,11 @@
     ]
   },
   {
-    "priority": 7,
+    "priority": 8,
     "value": "Chame um técnico",
     "entrys": [
       {"tag": "problemaip", "value": "Sim"},
       {"tag": "ip", "value": "Não"}
-    ]
-  },
-  {
-    "priority": 8,
-    "value": "Ligue para o responsável da sua internet",
-    "entrys": [
-      {"tag": "dns", "value": "Sim"}
     ]
   },
   {
@@ -87,6 +87,13 @@
     "value": "Chame um técnico",
     "entrys": [
       {"tag": "outro", "value": "Não"}
+    ]
+  },
+  {
+    "priority": 13,
+    "value": "Sem diagnóstico",
+    "entrys": [
+      {"tag": "outro", "value": "Sim"}
     ]
   }
 ]

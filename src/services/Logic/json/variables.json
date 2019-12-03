@@ -4,7 +4,7 @@
     "tag": "cabo",
     "display_name": "Cabo de Internet",
     "values": ["Sim", "Não"],
-    "question": "O cabo azul está conectado?"
+    "question": "O cabo de internet está conectado?"
   },
   {
     "id": 2,
@@ -89,5 +89,20 @@
     "display_name": "Problema questionado",
     "values": ["Sim", "Não"],
     "question": "O seu problema foi questionado?"
+  },
+  {
+    "id": 14,
+    "tag": "resultado",
+    "display_name": "Resultado",
+    "values": [
+      "Conecte o cabo",
+      "Ligue para o responsável da sua internet",
+      "Altere o proxy",
+      "Chame um técnico",
+      "Tente abrir com outro navegador",
+      "Verifique se o IP não está fixo",
+      "Está lenta por causa do download",
+      "Sem diagnostico"
+    ]
   }
 ]

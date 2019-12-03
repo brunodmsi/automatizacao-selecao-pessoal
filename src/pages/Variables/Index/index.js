@@ -6,18 +6,25 @@ import { Container, Variable } from './styles';
 
 import Variables from '../../../services/Logic/Variables';
 import colors from '../../../styles/colors';
+import Rules from '../../../services/Logic/Rules';
 
 const variables = new Variables();
+const rules = new Rules();
 export default function VariablesIndex() {
-  const [array, setArray] = useState(variables.getVars());
+  const [array, setArray] = useState([]);
 
   useEffect(() => {
-    console.tron.log(variables.getVars());
-  }, [array]);
+    const arr = variables.updateStorage();
+
+    setArray(arr);
+
+    return () => setArray(arr)
+  }, []);
 
   function handleDelete(tag) {
-    const newVars = variables.deleteVar(tag);
-    setArray(newVars);
+    setArray(array.filter(item => item.tag !== tag));
+    variables.deleteVar(tag);
+    rules.reOrderRules();
   }
 
   return (
@@ -27,12 +34,21 @@ export default function VariablesIndex() {
         <button type="button">
           <Link to="/variables/add">
             <MdAddCircleOutline size={20} color={colors.text} />
-            <span>Nova variável</span>
+            <span>Adicionar</span>
           </Link>
         </button>
       </header>
 
       <ul>
+        {array.length === 0
+          ? (
+            <Variable>
+              <span>Nenhuma variável registrada :(</span>
+              <div>
+                <span>Crie a primeira clicando acima!</span>
+              </div>
+            </Variable>
+          ) : (<></>)}
         {array.map(variable => (
           <Variable key={variable.id}>
             <span>{variable.display_name}</span>
@@ -44,9 +60,12 @@ export default function VariablesIndex() {
                   return `${value}/`
               })}</span>
 
-              <p onClick={() => handleDelete(variable.tag)}>
-                <MdDelete size={20} color={colors.primary} />
-              </p>
+              {variable.tag !== 'resultado'
+                ? (
+                  <p onClick={() => handleDelete(variable.tag)}>
+                    <MdDelete size={20} color={colors.primary} />
+                  </p>
+                ):<></>}
             </div>
           </Variable>
         ))}

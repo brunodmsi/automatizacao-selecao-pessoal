@@ -45,8 +45,46 @@ export const Container = styled.div`
       align-items: center;
       justify-content: center;
 
+      h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+
       h2 {
-        /* margin-bottom: 20px; */
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        text-align: center;
+
+        svg {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-left: 20px;
+        }
+      }
+
+      > select {
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 0;
+        padding: 10px 20px 10px 10px;
+        margin-top: 0;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+
+        > select {
+          margin-bottom: 10px;
+          border-radius: 4px;
+          border: 0;
+          padding: 10px 20px 10px 10px;
+          margin-top: 0;
+        }
       }
 
       input {
@@ -85,10 +123,6 @@ export const Container = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      h3 {
-        margin-top: 20px;
-      }
 
       ul {
         display: flex;

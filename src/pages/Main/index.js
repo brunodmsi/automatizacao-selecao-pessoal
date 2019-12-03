@@ -3,21 +3,41 @@ import { Form, Choice } from '@rocketseat/unform';
 
 import _ from '../../services/Func';
 
-import { Container, History } from './styles';
+import { Container, History, HistoryContainer, Question } from './styles';
 
 import Rules from '../../services/Logic/Rules';
 import Variables from '../../services/Logic/Variables';
 
 const variables = new Variables();
 const rules = new Rules();
+let values = [];
 export default function Main() {
-  const [variable, setVariable] = useState(() => {
-    if (rules.priority === 0) return rules.checkUnanswered([])
-  });
+  const [variable, setVariable] = useState({});
   const [tagCounter, setTagCounter] = useState(0);
   const [result, setResult] = useState({});
 
-  function handleSubmit(data) {
+  useEffect(() => {
+    function firstQuestion() {
+      const question = rules.checkUnanswered([]);
+      values = question.values.map(value => {
+        return {
+          label: value,
+          value
+        }
+      })
+      return question;
+    }
+
+    if (rules.getRules().length > 0)
+      setVariable(firstQuestion());
+    else
+      setVariable({
+        display_name: 'As regras ainda nao foram definidas.',
+        question: ''
+      });
+  }, [])
+
+  function handleSubmit(data, { resetForm }) {
     if (!data.choice) return;
 
     setTagCounter(tagCounter + 1);
@@ -29,16 +49,30 @@ export default function Main() {
     variables.addAnswer(answer);
     variables.addTag(variable.tag);
 
-    // console.log(variables.getAnswers())
+    const answers = variables.getAnswers()
 
-    const check = rules.checkResult(variables.getAnswers());
-    console.log(`#${rules.priority} check ${JSON.stringify(check)}`);
+    rules.addToHistory(
+      rules.priority,
+      `Resposta do usuário: ${answers[answers.length - 1].value}`
+    )
+
+    const check = rules.checkResult(answers);
     if (check.is === true){
       setResult(check.result);
     } else {
       const newVariable = rules.checkUnanswered(variables.getTags());
+
+      values = newVariable.values.map(value => {
+        return {
+          label: value,
+          value
+        }
+      })
+
       setVariable(newVariable);
     }
+
+    resetForm(data.choice)
   }
 
   return (
@@ -54,23 +88,24 @@ export default function Main() {
         ) : (<></>)}
       </header>
 
-      <div>
         {_.isEmpty(result) ? (
-          <Form onSubmit={handleSubmit}>
-            <h2>{variable.question}</h2>
+          <Question>
+            <Form onSubmit={handleSubmit}>
+              <h2>{variable.question !== ""
+                    ? variable.question
+                    : 'Defina as regras'}
+              </h2>
 
-            <Choice
-              name="choice"
-              options={[
-                { value: 'Sim', label: 'Sim' },
-                { value: 'Não', label: 'Não' }
-              ]}
-            />
+              <Choice
+                name="choice"
+                options={values}
+              />
 
-            <button type="submit">OK</button>
-          </Form>
+              <button type="submit">OK</button>
+            </Form>
+          </Question>
         ) : (
-          <div>
+          <HistoryContainer>
             <h2>
               Então...
             </h2>
@@ -80,18 +115,23 @@ export default function Main() {
             <h3>Histórico</h3>
 
             <ul>
-              {variables.getAnswersWithVars().map(answer => (
-                <History>
-                  <span>{answer.variable.display_name}</span>
+              {console.tron.log(rules.getHistory())}
+              {rules.getHistory().map((rule, index) => (
+                <History key={index}>
+                  <p>
+                    {rule.message}
+                    {rule.child.map(c => (
+                      <span>- {c}</span>
+                    ))}
+                  </p>
                   <div>
-                    <span>{answer.value}</span>
+                    <span>{rule.child.length} interações</span>
                   </div>
                 </History>
               ))}
             </ul>
-          </div>
+          </HistoryContainer>
         )}
-      </div>
     </Container>
   );
 }

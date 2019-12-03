@@ -11,7 +11,6 @@ export const Container = styled.div`
 
   header {
     margin-bottom: 10px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,6 +32,11 @@ export const Container = styled.div`
       border: 0;
       border-radius: 4px;
       transition: 0.2s background;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
 
       :hover {
         background-color: ${darken(0.03, colors.primary)};
